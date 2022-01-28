@@ -9,8 +9,8 @@ const { pool } = require('./dbConfig');
 
 const app = express();
 
-const PORT = process.env.PORT || 8000;
-
+const PORT = process.env.PORT || 5050;
+const baseUrl = process.env.BASE_URL || '0.0.0.0';
 
 
 //db.connect();
@@ -39,9 +39,11 @@ var corsOptions = {
 app.use(cors(corsOptions));
 
 
+app.get("/", (req, res) => {
+    res.send("Welcome to Popcorn We TAKE children's food and make them ours");
+})
 
 
-
-app.listen(PORT, () => {
+app.listen(PORT, baseUrl,  () => {
 	console.log(`Server is running on port ${PORT}`);
 });

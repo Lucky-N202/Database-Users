@@ -21,6 +21,7 @@
     "multer": "^1.4.4",
     "multer-storage-cloudinary": "^4.0.0",
     "nodemon": "^2.0.15",
-    "pg": "^8.7.1"
+    "pg": "^8.7.1",
+    "pg-cursor": "^2.7.1"
   }
 }
